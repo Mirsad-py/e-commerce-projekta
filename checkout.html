@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout | IT Fashion Store</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/checkout.css" rel="stylesheet" />
+
+    <script defer="" src="js/main.js"></script>
+</head>
+
+<body class="it-body min-vh-100 d-flex flex-column">
+    <!-- HEADER -->
+    <header class="it-header border-bottom">
+        <div class="container py-3">
+            <div class="row align-items-center g-3">
+                <!-- Logo -->
+                <div class="col-12 col-lg-2 text-center text-lg-start">
+                    <a aria-label="Home" class="d-inline-block" href="products.html">
+                        <img alt="IT Logo" class="it-logo-40" src="images/it-logo.png" />
+                    </a>
+                </div>
+                <!-- Nav -->
+                <div class="col-12 col-lg-6">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler ms-auto" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center justify-content-lg-start" id="mainNav">
+                            <ul class="navbar-nav gap-lg-4">
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#products">Shop</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#about">About</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Actions -->
+                <div class="col-12 col-lg-4">
+                    <div class="d-flex gap-2 align-items-center justify-content-center justify-content-lg-end">
+                        <div class="input-group it-max-320">
+                            <span class="input-group-text bg-white border-0 it-pill-left">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input aria-label="Search" class="form-control border-0 it-pill-right" placeholder="Search" type="text" />
+                        </div>
+                        <a aria-label="Cart" class="text-dark fs-5" href="checkout.html" onclick="openCart()"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+                        <a aria-label="Login" class="text-dark fs-5" href="login.html"><i
+                                class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class="py-4 py-lg-5">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb mb-0 it-breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="products.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="products.html">Cart</a></li>
+                    <li aria-current="page" class="breadcrumb-item active">Checkout</li>
+                </ol>
+            </nav>
+            <h1 class="text-center it-title mb-4 mb-lg-5">Checkout</h1>
+            <div class="row g-4 g-lg-5 align-items-start">
+                <!-- RIGHT (CART) -->
+                <aside class="col-12 col-lg-5 order-1 order-lg-2">
+                    <div class="it-sticky">
+                        <h2 class="it-section-title mb-2">Review your Cart</h2>
+                        <div class="card it-card it-cart shadow-sm">
+                            <div class="card-body p-3 p-lg-4">
+                                <!-- Item -->
+                                <div class="it-cart-item">
+                                    <img alt="Blazer" class="it-thumb" src="images/Blazer.jpg" />
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold it-item-name">Blazer</div>
+                                        <div class="it-item-meta">Size: S</div>
+                                        <div class="it-qty mt-2">
+                                            <button aria-label="Decrease quantity" type="button">-</button>
+                                            <span>1</span>
+                                            <button aria-label="Increase quantity" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="it-price">$95</div>
+                                </div>
+                                <div class="it-cart-item">
+                                    <img alt="Chunky Knit Sweater" class="it-thumb" src="images/Chunky Knit Sweater.jpg" />
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold it-item-name">Chunky Knit Sweater</div>
+                                        <div class="it-item-meta">Size: M</div>
+                                        <div class="it-qty mt-2">
+                                            <button aria-label="Decrease quantity" type="button">-</button>
+                                            <span>1</span>
+                                            <button aria-label="Increase quantity" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="it-price">$55</div>
+                                </div>
+                                <div class="it-cart-item">
+                                    <img alt="Mesh Sleeve Blouse" class="it-thumb" src="images/Mesh Sleeve Blouse.jpg" />
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold it-item-name">Mesh Sleeve Blouse</div>
+                                        <div class="it-item-meta">Size: S</div>
+                                        <div class="it-qty mt-2">
+                                            <button aria-label="Decrease quantity" type="button">-</button>
+                                            <span>1</span>
+                                            <button aria-label="Increase quantity" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="it-price">$32</div>
+                                </div>
+                                <div class="it-cart-item mb-0 border-0 pb-0">
+                                    <img alt="Retro Jeans" class="it-thumb" src="images/Retro Jeans.jpg" />
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold it-item-name">Retro Jeans</div>
+                                        <div class="it-item-meta">Size: S</div>
+                                        <div class="it-qty mt-2">
+                                            <button aria-label="Decrease quantity" type="button">-</button>
+                                            <span>1</span>
+                                            <button aria-label="Increase quantity" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="it-price">$70</div>
+                                </div>
+                                <div class="it-total mt-4 pt-3">
+                                    <span>Total</span>
+                                    <strong>$252</strong>
+                                </div>
+
+                                <!-- Order Summary: Promo code -->
+                                <div class="mt-3">
+                                    <div class="input-group">
+                                        <input id="promo-input" type="text" class="form-control" placeholder="Add promo code" />
+                                        <button class="btn btn-dark" type="button" onclick="validateAndNotify()">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- LEFT (FORMS) -->
+                <div class="col-12 col-lg-7 order-2 order-lg-1">
+                    <!-- Shipping -->
+                    <section aria-labelledby="ship-title">
+                        <h2 class="it-section-title mb-2" id="ship-title">Shipping Information</h2>
+                        <div class="card it-card shadow-sm">
+                            <div class="card-body p-3 p-lg-4">
+                                <form class="row g-3" novalidate="">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label it-label" for="fname">First Name</label>
+                                        <input class="form-control it-control" id="fname" type="text" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label it-label" for="lname">Last Name</label>
+                                        <input class="form-control it-control" id="lname" type="text" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label it-label" for="addr">Address</label>
+                                        <input class="form-control it-control" id="addr" type="text" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label it-label" for="apt">Apartment, suite, etc.</label>
+                                        <input class="form-control it-control" id="apt" type="text" />
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="country">Country</label>
+                                        <select class="form-select it-control" id="country">
+                                            <option value="">Select</option>
+                                            <option>BiH</option>
+                                            <option>Serbia</option>
+                                            <option>Croatia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="city">City</label>
+                                        <select class="form-select it-control" id="city">
+                                            <option value="">Select</option>
+                                            <option>Sarajevo</option>
+                                            <option>Tuzla</option>
+                                            <option>Mostar</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="zip">Zipcode</label>
+                                        <select class="form-select it-control" id="zip">
+                                            <option value="">Select</option>
+                                            <option>71000</option>
+                                            <option>75000</option>
+                                            <option>88000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input it-check" id="saveContact" type="checkbox" />
+                                            <label class="form-check-label it-check-label" for="saveContact">Save
+                                                contact information</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Payment -->
+                    <section aria-labelledby="pay-title" class="mt-4">
+                        <h2 class="it-section-title mb-2" id="pay-title">Payment Information</h2>
+                        <div class="card it-card shadow-sm">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-grid d-sm-flex gap-2 mb-3">
+                                    <label class="it-paypill">
+                                        <input checked="" name="payMethod" type="radio" />
+                                        <span class="it-paypal"><i class="fa-brands fa-paypal me-1"></i> PayPal</span>
+                                    </label>
+                                    <label class="it-paypill">
+                                        <input name="payMethod" type="radio" />
+                                        <span>Cash</span>
+                                    </label>
+                                </div>
+                                <form class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label it-label" for="cname">Cardholder Name</label>
+                                        <input class="form-control it-control" id="cname" type="text">
+                                        </input>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label it-label" for="cnum">Card Number</label>
+                                        <input class="form-control it-control" id="cnum" type="text">
+                                        </input>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="month">Month</label>
+                                        <select class="form-select it-control" id="month">
+                                            <option value="">Select</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="year">Year</label>
+                                        <select class="form-select it-control" id="year">
+                                            <option value="">Select</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label it-label" for="cvc">CVC</label>
+                                        <input class="form-control it-control" id="cvc" type="text">
+                                        </input>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <button class="btn it-paybtn w-100" type="button">Pay</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="it-footer border-top mt-auto">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">SHOP</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Dresses</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Jackets</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Skirts</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Shoes &amp;
+                                Bags</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Gift Cards</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Sales &amp;
+                                Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">INFORMATION</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#about">About</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Terms and
+                                Conditions</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Privacy
+                                Policy</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Delivery and
+                                Return</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">CUSTOMER SUPPORT</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#contact">Contact</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Help</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+                <p class="mb-0 text-dark">Designed and developed by: <strong>ITAcademy</strong></p>
+                <div class="d-flex gap-2">
+                    <a aria-label="Facebook" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a aria-label="Instagram" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a aria-label="TikTok" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>

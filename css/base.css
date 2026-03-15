@@ -1,0 +1,57 @@
+/* =========================
+   GLOBAL THEME / SHARED STYLES
+   ========================= */
+
+:root{
+  --bg: #f6f0ee;
+  --header: #efe6e2;
+  --footer: #f3ece9;
+  --card: #f7f2f0;
+  --border: #d9cdca;
+  --muted: #777;
+  --text: #111;
+
+  --control-border: #cfc0bc;
+  --control-border-focus: #b6a4a0;
+}
+
+/* Page base */
+html, body { height: 100%; }
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Shared header/footer */
+.it-header{ background: var(--header); }
+.it-footer{ background: var(--footer); }
+
+/* Shared small utilities (replace inline styles) */
+.it-logo-40{ height: 40px; }
+.it-max-320{ max-width: 320px; }
+.it-max-420{ max-width: 420px; }
+
+.it-pill-left{ border-radius: 999px 0 0 999px; }
+.it-pill-right{ border-radius: 0 999px 999px 0; }
+
+.it-select-auto{ width: auto; }
+
+/* Cards */
+.it-card{
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.it-product-img{
+  object-fit: cover;
+  height: 240px;
+}
+
+/* Form controls: keep Bootstrap feel, just align colors */
+.form-control, .form-select{
+  border-color: var(--control-border);
+}
+.form-control:focus, .form-select:focus{
+  border-color: var(--control-border-focus);
+  box-shadow: 0 0 0 .25rem rgba(182, 164, 160, .25);
+}

@@ -1,0 +1,20 @@
+/* Tema (boje kao na ostalim stranicama) */
+
+body {
+    color: #111;
+}
+
+
+/* finije za kartice */
+
+.card {
+    border-radius: 14px;
+}
+
+
+/* Slike kartica */
+
+.card-img-top {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}

@@ -1,0 +1,13 @@
+/* Pozadine */
+
+.bg-page {
+    background: var(--bg);
+}
+
+
+/* Login kartica: boja i border */
+
+.login-card-bg {
+    background: var(--card);
+    border-color: var(--border) !important;
+}

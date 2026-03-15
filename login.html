@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login | IT Fashion Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+
+    <script defer="" src="js/main.js"></script>
+</head>
+
+<body class="it-body min-vh-100 d-flex flex-column">
+    <!-- HEADER -->
+    <header class="it-header border-bottom">
+        <div class="container py-3">
+            <div class="row align-items-center g-3">
+                <!-- Logo -->
+                <div class="col-12 col-lg-2 text-center text-lg-start">
+                    <a aria-label="Home" class="d-inline-block" href="products.html">
+                        <img alt="IT Logo" class="it-logo-40" src="images/it-logo.png" />
+                    </a>
+                </div>
+                <!-- Nav -->
+                <div class="col-12 col-lg-6">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler ms-auto" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                        <div class="collapse navbar-collapse justify-content-center justify-content-lg-start" id="mainNav">
+                            <ul class="navbar-nav gap-lg-4">
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#products">Shop</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="products.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Actions -->
+                <div class="col-12 col-lg-4">
+                    <div class="d-flex gap-2 align-items-center justify-content-center justify-content-lg-end">
+                        <div class="input-group it-max-320">
+                            <span class="input-group-text bg-white border-0 it-pill-left">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+                            <input aria-label="Search" class="form-control border-0 it-pill-right" placeholder="Search" type="text" />
+                        </div>
+                        <a aria-label="Cart" class="text-dark fs-5" href="checkout.html" onclick="openCart()"><i
+                class="fa-solid fa-cart-shopping"></i></a>
+                        <a aria-label="Login" class="text-dark fs-5" href="login.html"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class="flex-grow-1 py-4 py-md-5">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a class="text-decoration-none text-muted" href="products.html">Home</a>
+                    </li>
+                    <li aria-current="page" class="breadcrumb-item active text-muted">Login</li>
+                </ol>
+            </nav>
+            <h1 class="text-center fw-bold mb-4">Login</h1>
+            <!-- Login Card -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <section class="card border login-card-bg">
+                        <div class="card-body p-4 p-md-5">
+                            <form action="#" class="mx-auto it-max-420" method="post" onsubmit="handleLoginSubmit(event)">
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" id="email" required="" type="email" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="password">Password</label>
+                                    <input class="form-control" id="password" required="" type="password" />
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="remember" type="checkbox" />
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                    <a class="link-secondary text-decoration-underline" href="products.html">Forgot password?</a>
+                                </div>
+                                <button class="btn btn-dark w-100 fw-bold py-2" type="submit">
+                  LOGIN
+                </button>
+                                <p class="text-center text-secondary mt-3 mb-0">
+                                    Or <a class="text-dark text-decoration-underline" href="products.html">Create an Account</a>
+                                </p>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="it-footer border-top mt-auto">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">SHOP</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Dresses</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Jackets</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Skirts</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Shoes &amp; Bags</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Gift Cards</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Sales &amp; Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">INFORMATION</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#about">About</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Terms and Conditions</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Privacy Policy</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Delivery and Return</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h6 fw-bold">CUSTOMER SUPPORT</h3>
+                    <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+                        <li><a class="link-secondary text-decoration-none" href="products.html#contact">Contact</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">Help</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="products.html#products">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+                <p class="mb-0 text-dark">Designed and developed by: <strong>ITAcademy</strong></p>
+                <div class="d-flex gap-2">
+                    <a aria-label="Facebook" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+              class="fa-brands fa-facebook-f"></i></a>
+                    <a aria-label="Instagram" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+              class="fa-brands fa-instagram"></i></a>
+                    <a aria-label="TikTok" class="btn btn-outline-dark btn-sm" href="products.html#contact"><i
+              class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>
